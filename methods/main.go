@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type person interface {
 	Talk()
@@ -13,21 +15,21 @@ type Human struct {
 	Age  int
 }
 
-func (h Human) Talk() {
+func (h *Human) Talk() {
 	fmt.Printf("Hello this is me! My name is %s and I am %d years old\n", h.Name, h.Age)
 }
 
-func (h Human) Count() {
+func (h *Human) Count() {
 	fmt.Println("1, 2, 3 4, 5, 6, 7")
 }
 
-func (h Human) Walk() {
+func (h *Human) Walk() {
 	fmt.Println("\\o/ I'm here and now I'm                                over here.\\o/ ")
 }
 
 func main() {
-	peter := &Human{"Peter", 23}
-	jimmy := &Human{"Jimmy", 64}
+	peter := Human{"Peter", 23}
+	jimmy := Human{"Jimmy", 64}
 
 	peter.Talk()
 	peter.Count()
