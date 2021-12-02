@@ -8,24 +8,30 @@ type person interface {
 	Walk()
 }
 
-type Jimmy struct {
-	name string
+type Human struct {
+	Name string
+	Age  int
 }
 
-func (j *Jimmy) Talk() {
-	fmt.Println("Hello this is me!")
+func (h Human) Talk() {
+	fmt.Printf("Hello this is me! My name is %s and I am %d years old\n", h.Name, h.Age)
 }
 
-func (j *Jimmy) Count() {
+func (h Human) Count() {
 	fmt.Println("1, 2, 3 4, 5, 6, 7")
 }
 
-func (j *Jimmy) Walk() {
+func (h Human) Walk() {
 	fmt.Println("\\o/ I'm here and now I'm                                over here.\\o/ ")
 }
 
 func main() {
-	jimmy := &Jimmy{}
+	peter := &Human{"Peter", 23}
+	jimmy := &Human{"Jimmy", 64}
+
+	peter.Talk()
+	peter.Count()
+	peter.Walk()
 
 	jimmy.Talk()
 	jimmy.Count()
