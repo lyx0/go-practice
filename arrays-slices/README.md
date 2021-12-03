@@ -18,17 +18,19 @@ A slice is not an array. A slice describes a piece of an array.
 
 
 Given our buffer arrray we can create a slice 
-```
+```go
 var slice []byte = buffer[100:150]
 ```
 
 A more idiomatic way: 
-```
+```go
 var slice = buffer[100:150]
 ```
 
 Short declaration: 
-`slice := buffer[100:150]`
+```go
+slice := buffer[100:150]
+```
 
 A slice has a length, and a pointer to an element of an array, like this
 
