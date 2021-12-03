@@ -45,3 +45,23 @@ slice := sliceHeader{
     ZerothElement: &buffer[100],
 }
 ```
+
+We can also slice a slice
+
+```go
+slice := buffer[100:150]
+```
+
+### Passing slices to functions
+
+It's impotant to understand that a slice is itself a value, its a value holding a pointer and a length.
+
+When we called IndexRune it was passed as a **copy of the slice header**.
+``` go
+func AddOneToEachElement(slice []byte) {
+    for i := range slice {
+        slice[i]++
+    }
+}
+```
+
