@@ -18,7 +18,7 @@ A slice is not an array. A slice describes a piece of an array.
 
 
 Given our buffer arrray we can create a slice 
-`var slice []byte = buffer[100:150]`
+    `var slice []byte = buffer[100:150]`
 
 A more idiomatic way: 
     `var slice = buffer[100:150]`
