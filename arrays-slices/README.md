@@ -21,10 +21,10 @@ Given our buffer arrray we can create a slice
     var slice []byte = buffer[100:150]
 
 A more idiomatic way: 
-    `var slice = buffer[100:150]`.
+    var slice = buffer[100:150]
 
 Short declaration: 
-    `slice := buffer[100:150]`
+    slice := buffer[100:150]
 
 A slice has a length, and a pointer to an element of an array, like this
 
