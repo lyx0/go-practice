@@ -34,7 +34,7 @@ slice := buffer[100:150]
 
 A slice has a length, and a pointer to an element of an array, like this
 
-```
+```go
 type sliceHeader struct {
     Length  int
     ZerothElement *byte
