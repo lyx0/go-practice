@@ -17,13 +17,19 @@ A slice is a data structure describing a contiguous (connecting) section of an a
 A slice is not an array. A slice describes a piece of an array.
 
 
-Given our buffer arrray we can create a slice `var slice []byte = buffer[100:150]`
-A more idiomatic way: `var slice = buffer[100:150]`.
-Short declaration: `slice := buffer[100:150]`
+Given our buffer arrray we can create a slice 
+    var slice []byte = buffer[100:150]
+
+A more idiomatic way: 
+    `var slice = buffer[100:150]`.
+
+Short declaration: 
+    `slice := buffer[100:150]`
 
 A slice has a length, and a pointer to an element of an array, like this
 
-```type sliceHeader struct {
+```
+type sliceHeader struct {
     Length  int
     ZerothElement *byte
 }
